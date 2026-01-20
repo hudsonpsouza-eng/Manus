@@ -6,6 +6,24 @@ import { Shield, Search, CheckCircle2, ArrowRight, FileCheck, Clock, Zap, Award 
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Aqui você pode adicionar a lógica para enviar o formulário
+    console.log('Formulário enviado:', contactForm);
+    setFormSubmitted(true);
+    setTimeout(() => {
+      setContactForm({ name: '', email: '', message: '' });
+      setFormSubmitted(false);
+    }, 3000);
+  };
+
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({ ...prev, [name]: value }));
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -488,6 +506,101 @@ export default function Home() {
                 <div className="text-xl md:text-2xl font-bold text-amber-300 mb-2">Juiz de Fora, MG</div>
                 <div className="text-sm md:text-base text-gray-300">Localização</div>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-blue-900">
+                Entre em Contato
+              </h2>
+              <p className="text-base md:text-lg text-gray-600">
+                Envie uma mensagem e responderemos em breve
+              </p>
+            </div>
+
+            <div className="glass-effect-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                {/* Name Field */}
+                <div>
+                  <label className="block text-sm md:text-base font-semibold text-blue-900 mb-2">
+                    Nome *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={contactForm.name}
+                    onChange={handleContactChange}
+                    placeholder="Seu nome completo"
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all"
+                  />
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label className="block text-sm md:text-base font-semibold text-blue-900 mb-2">
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={contactForm.email}
+                    onChange={handleContactChange}
+                    placeholder="seu@email.com"
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all"
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label className="block text-sm md:text-base font-semibold text-blue-900 mb-2">
+                    Mensagem *
+                  </label>
+                  <textarea
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleContactChange}
+                    placeholder="Descreva sua mensagem aqui..."
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all resize-none"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    type="submit"
+                    className="btn-premium text-base px-6 py-3 w-full sm:w-auto"
+                  >
+                    Enviar Mensagem
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  {formSubmitted && (
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      className="flex items-center gap-2 text-green-600 font-semibold"
+                    >
+                      <CheckCircle2 className="h-5 w-5" />
+                      Mensagem enviada com sucesso!
+                    </motion.div>
+                  )}
+                </div>
+              </form>
             </div>
           </motion.div>
         </div>
