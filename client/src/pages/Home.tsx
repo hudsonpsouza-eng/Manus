@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services-section" className="py-12 sm:py-16 lg:py-24 bg-[#000080] relative">
+      <section id="services-section" className="py-12 sm:py-16 lg:py-24 bg-[#1A3A52] relative">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-3 sm:mb-4">Nossos Serviços</h2>
@@ -261,7 +261,7 @@ export default function Home() {
                 </div>
                 
                 <Button 
-                  className="w-full mt-6 bg-[#1A2D40] hover:bg-[#2A3D50] text-white"
+                  className="w-full mt-6 bg-[#B89C5B] hover:bg-[#9B7A45] text-white font-semibold py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
                   onClick={() => {
                     sessionStorage.setItem('selectedService', 'priorArt');
                     setTimeout(() => {
@@ -273,6 +273,7 @@ export default function Home() {
                   }}
                 >
                   Solicitar Análise
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
