@@ -137,7 +137,7 @@ export default function Home() {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <div className="mb-6">
                   <img 
-                    src="/images/services-trademark.jpg" 
+                    src="/trademark-card.png" 
                     alt="Registro de Marca" 
                     className="w-full h-48 object-cover rounded-lg mb-6"
                   />
@@ -152,7 +152,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#B89C5B] mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-sm sm:text-base text-white">Marca Nominativa - R$ 700,00</div>
+                      <div className="font-semibold text-sm sm:text-base text-white">Marca Nominativa - R$ 250,00</div>
                       <div className="text-xs sm:text-sm text-gray-300">Proteção do nome/texto da marca</div>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#B89C5B] mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-sm sm:text-base text-white">Marca Figurativa - R$ 800,00</div>
+                      <div className="font-semibold text-sm sm:text-base text-white">Marca Figurativa - R$ 300,00</div>
                       <div className="text-xs sm:text-sm text-gray-300">Proteção do logotipo/símbolo</div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#B89C5B] mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-sm sm:text-base text-white">Marca Mista - R$ 1.500,00</div>
+                      <div className="font-semibold text-sm sm:text-base text-white">Marca Mista - R$ 500,00</div>
                       <div className="text-xs sm:text-sm text-gray-300">Proteção completa: nome + logotipo</div>
                     </div>
                   </div>
@@ -181,11 +181,11 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
-                    <span>+ R$ 300,00 por classe adicional</span>
+                    <span>+R$50,00 por classe adicional</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
-                    <span>+ R$ 500,00 por reformulação da marca</span>
+                    <span>+R$200,00 por reformulação da marca para registro</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
@@ -216,7 +216,7 @@ export default function Home() {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <div className="mb-6">
                   <img 
-                    src="/images/services-patent.jpg" 
+                    src="/search-card.png" 
                     alt="Busca por Anterioridades" 
                     className="w-full h-48 object-cover rounded-lg mb-6"
                   />
@@ -231,7 +231,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#B89C5B] mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-sm sm:text-base text-white">Projeto Básico - R$ 1.100,00</div>
+                      <div className="font-semibold text-sm sm:text-base text-white">Projeto Básico - R$ 500,00</div>
                       <div className="text-xs sm:text-sm text-gray-300">Relatório simples + Parecer simples</div>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#B89C5B] mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-sm sm:text-base text-white">Projeto Avançado - R$ 1.800,00 a R$ 2.000,00</div>
+                      <div className="font-semibold text-sm sm:text-base text-white">Projeto Avançado - R$ 800,00 a R$ 1.000,00</div>
                       <div className="text-xs sm:text-sm text-gray-300">Relatório técnico + Análise de patenteabilidade + Mapa de anterioridades + Parecer detalhado</div>
                     </div>
                   </div>
@@ -248,11 +248,7 @@ export default function Home() {
                 <div className="border-t border-white/20 pt-4 space-y-2 text-sm text-gray-300">
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
-                    <span>+ R$ 200,00 por reivindicação adicional</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
-                    <span>+ R$ 400,00 por análise internacional</span>
+                    <span>+R$100,00 por reivindicação adicional</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-[#B89C5B]" />
@@ -364,7 +360,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[#1A2D40] mb-4">Sobre Hudson Souza Advocacia</h2>
+              <h2 className="text-[#1A2D40] mb-4">Sobre Hudson Paiva de Souza</h2>
               <div className="h-1 w-24 bg-[#B89C5B] mx-auto mb-6" />
             </div>
             
