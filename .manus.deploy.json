@@ -1,0 +1,28 @@
+{
+  "name": "hudson-souza-advocacia",
+  "version": "1.0.0",
+  "description": "Site de Propriedade Intelectual - Hudson Souza Advocacia",
+  "type": "web-db-user",
+  "runtime": "node",
+  "buildCommand": "pnpm build",
+  "startCommand": "NODE_ENV=production node dist/index.js",
+  "port": 3000,
+  "env": {
+    "NODE_ENV": "production",
+    "OAUTH_SERVER_URL": "${OAUTH_SERVER_URL}",
+    "DATABASE_URL": "${DATABASE_URL}"
+  },
+  "features": {
+    "responsive": true,
+    "mobileFriendly": true,
+    "ssl": true,
+    "rateLimiting": true,
+    "securityHeaders": true
+  },
+  "deployment": {
+    "region": "us-east-1",
+    "replicas": 1,
+    "memory": "512MB",
+    "cpu": "0.5"
+  }
+}
